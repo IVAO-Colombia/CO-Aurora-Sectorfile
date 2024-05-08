@@ -1,0 +1,130 @@
+// - IVAO virtual ATC client - Sectorfile
+// - Colombian SectorFile (Aurora) v2 - *COnew*
+// - Modified by
+// - 309305 - Andres Ramirez
+// - 335074 - Camilo Calle
+// - 412728 - Jose David Patermina
+// - 534208 - Juan Pedraza
+// - 407658 - Santiago Londoño
+// - 528310 - Santiago Hurtado
+// - 457087 - Sebastian Hurtado
+// - 570967 - Andres Rey
+// - 679556 - Sebastian Camacho
+// - 540402 - Carlos Perez
+// - 657678 - Juan Jose Sanchez 
+// - Compatible with: IVAO Aurora SectorFile format
+// - Any question contact CO-ATC@IVAO.AERO
+// -------------------------------------------------------------------- 
+// - (C)2024 IVAO Colombian Division co.ivao.aero
+// - Usage only allowed on the IVAO Network or at IVAO related events
+// -------------------------------------------------------------------- 
+// - Sector redisigned April 2024 - For Any questions regarding the 
+// - sectorfile estructure contact 657678
+// -------------------------------------------------------------------- 
+// - Sectorfile estructure adapted from ES Division
+// -------------------------------------------------------------------- 
+
+[INFO]
+N005.19.08.899
+W072.23.02.783
+60
+60
+-9.5
+COnew;COnew\TMA\EYP
+
+[DEFINE]
+TAXIW;#FFFFFF;
+THR;#FFFFFF;
+RWYMARKS;#FFFFFF;
+ARCOS;#0C14BF;
+GRASS;#0A4618;0;#0A4618;
+DIRT;#442910;0;#442910;
+RUNWAY;#141414;0;#141414;
+TAXI;#343030;1;#343030;
+BUILDING;#E97124;1;#E97124;
+ENTRENAMIENTO;#1C4163;
+TSTP;#FFFFFF;
+RED;#E40D0D; 
+BLUE;#2D71B9;
+GRAY;#6E7372;
+
+[ATC]
+F;Common\ATC\COLOMBIA.atc
+F;Common\ATC\CO_STAFF.atc
+
+[AIRPORT]
+F;TMA\EYP\OTHER\EYP.apt
+
+[RUNWAY]
+F;TMA\EYP\OTHER\EYP.rwy
+
+[FIXES]
+F;Common\NAVAIDS\FIX_BOUNDARIES_SKED.fix
+F;FIR\SKED\AIRWAYS\LOW\SKED_LOW_BOUNDARIES.fix
+//HIGH AIRWAYS for SID - STAR Compatibility
+F;FIR\SKED\AIRWAYS\HIGH\SKED_HIGH_BOUNDARIES.fix
+F;TMA\EYP\NAVAIDS\EYP_TERM.fix
+
+[NDB]
+
+[VOR]
+F;Common\NAVAIDS\VOR_SK_FIR.vor
+
+[LOW AIRWAY]
+F;FIR\SKED\AIRWAYS\LOW\SKED_LOW.lairway
+
+//OPTIONAL
+[HIGH AIRWAY]
+//F;FIR\SKED\AIRWAYS\HIGH\SKED_HIGH.hairway
+
+[ARTCC]
+F;Common\AIRSPACE\SKED.artcc
+
+[ARTCC HIGH]
+F;TMA\BOG\AIRSPACE\BOG.hartcc
+F;TMA\VVC\AIRSPACE\VVC.hartcc
+F;TMA\EYP\AIRSPACE\EYP.hartcc
+F;TMA\BGA\AIRSPACE\BGA.hartcc
+F;TMA\CUC\AIRSPACE\CUC.hartcc
+
+[ARTCC LOW]
+F;TMA\EYP\AIRSPACE\EYP.lartcc
+
+[GEO]
+// COLOMBIA FRONTERAS - COSTAS
+F;Common\GEO\BORDER_LOWRES.geo
+// AEROPUERTOS
+F;TMA\EYP\GEO\AIRPORTS\SKYP.geo 
+F;TMA\EYP\GEO\AIRPORTS\SKPZ.geo
+// DANGER - PROHIBITED - RESTRICTED
+F;Common\GEO\AREAS\A_DANGER.geo
+F;Common\GEO\AREAS\A_PROHIBIT.geo
+F;Common\GEO\AREAS\A_RESTRICT.geo
+// ENTRENAMIENTO
+F;TMA\EYP\GEO\AREAS\ENTTO_EYP.geo
+
+[FILLCOLOR]
+// Centers
+F;Common\FCL\DY_DEP_SKED_NE_CTR.fcl
+F;Common\FCL\DY_DEP_SKED_SE_CTR.fcl
+F;Common\FCL\DY_DEP_SKED_CTR.fcl
+F;Common\FCL\DY_DEP_SKBO_UTA_CTR.fcl
+// BND TMAs
+F;TMA\BOG\FCL\DY_DEP_BOG_HIGH.fcl
+F;TMA\VVC\FCL\DY_DEP_VVC_HIGH.fcl
+F;TMA\EYP\FCL\DY_DEP_EYP_HIGH.fcl
+F;TMA\BGA\FCL\DY_DEP_BGA_HIGH.fcl
+F;TMA\CUC\FCL\DY_DEP_CUC_HIGH.fcl
+// LOW ARTCCs
+F;TMA\EYP\FCL\DY_DEP_EYP_LOW.fcl
+// ENTTO
+F;TMA\EYP\GEO\AREAS\ENTTO_EYP.tfl
+
+[COLORSCHEME]
+
+[PROFILE]
+
+[CPDLC]
+F;Common\ATC\phraseology.cpdlc
+
+[ATIS]
