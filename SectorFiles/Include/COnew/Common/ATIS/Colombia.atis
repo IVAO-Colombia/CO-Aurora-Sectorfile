@@ -1,1 +1,0 @@
-{ "region" : "default", "structure" : "[STATION_NAME] atis Information [ATIS_LETTER] [ATIS_TIME]. Arrival Runway [ARR], Departure Runway [DEP]. [REMARK]. [METAR]. Transition Altitude [TA], Transition Level [TL]. Confirm atis information [ATIS_LETTER]." }
