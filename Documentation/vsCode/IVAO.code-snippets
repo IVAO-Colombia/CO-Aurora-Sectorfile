@@ -1,0 +1,120 @@
+	// Place your SectorFiles workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	{
+		"Bracket": {
+			"prefix": "br",
+			"body": "<br>;",
+			"description": "Bracket to divide segments"
+		},
+	
+		"SIDs or STARs": {
+			"prefix": [".sid",".str"],
+			"body": "${1:ICAO};${2:RWYs};${3:DESIGNATOR};${LAT_LON};$LAT_LON;$0",
+			"description": "ICAO;RWYs;DESIGNATOR;LAT;LON;"
+		},
+		"TRANSITION":{
+			"prefix": ".trans",
+			"body": "${1:ICAO};${2:RWYs};${3:DESIGNATOR};${4:LAT};${5:LON};1;$0",
+			"description": "ICAO;RWYs;DESIGNATOR;LAT;LON;1;"
+		},
+		"HOLD":{
+			"prefix": ".hold",
+			"body": "${1:ICAO};${2:RWYs};${HOLDING_FIX} HOLD;$HOLDING_FIX;$HOLDING_FIX;2;$0",
+			"description": "ICAO;RWYs;HOLDING FIX + HOLD;FIX;FIX;2;"
+		},
+		"IAP":{
+			"prefix": ".iap",
+			"body": "${1:ICAO};${2:RWYs};${3:DESIGNATOR};${LAT_LON};$LAT_LON;3;$0",
+			"description": "ICAO;RWYs;DESIGNATOR;LAT;LON;3;"
+		},
+		"FAF or FAP":{
+			"prefix": ".faf",
+			"body": "${1:ICAO};${2:RWYs};${3:DESIGNATOR};${LAT_LON};$LAT_LON;4;$0",
+			"description": "ICAO;RWYs;DESIGNATOR;LAT;LON;4;"
+		},
+		"GO AROUND / MAPP":{
+			"prefix": [".mapp",".ga"],
+			"body": "${1:ICAO};${2:RWYs};MAPP${3:DESIGNATOR};${LAT_LON};$LAT_LON;5;$0",
+			"description": "ICAO;RWYs;MAPP + DESIGNATOR;LAT;LON;5;"
+		},
+		"AIRPORTS":{
+			"prefix": [".ap",".apt"],
+			"body": "${1:ICAO};${2:ELEVATION};${3:TA};${4:LAT};${5:LON};${6:APT_NAME};$0",
+			"description": "ICAO;ELEVATION;TRANSITION ALT;LAT;LON;AIRPORT NAME;"
+		},
+		"RUNWAYS":{
+			"prefix": ".rwy",
+			"body": "${1:ICAO};${2:PRIMARY RWY};${3:SECONDARY RWY};${4:PRIMARY RWY ELEVATION};${5:SECONDARY RWY ELEVATION};${6:PRIMARY RWY LAT};${7:PRIMARY RWY LON};${8:SECONDARY RWY LAT};${9:SECONDARY RWY LON};$0",
+			"description": "Runway Syntax;"
+		},
+		"DIVIDER":{
+			"prefix": ".div",
+			"body": "//;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n//;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;${TITLE};;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n//;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+			"description": "DIVIDER"
+			},	
+		"AIRSPACE":{
+			"prefix": [".lartcc",".hartcc",".artcc"],
+			"body": "${1|L,T|};${2:IDENTIFIER};${3:LAT};${4:LON};$0",
+			"description": "Track or Label;IDENTIFIER;LAT;LON;FONT SIZE (Optional);"
+			},	
+		"VFR FIX":{
+			"prefix": ".vfi",
+			"body": "${1:FIX_NAME};${2:ALTITUDE};${3:LAT};${4:LON};$0",
+			"description": "FIX NAME;ALTITUDE;LAT;LON;"
+			},		
+		"VFR ROUTE":{
+			"prefix": ".vrt",
+			"body": "${1:#SERIAL};${LAT_LON};$LAT_LON;$0",
+			"description": "NUMBER (SERIAL);LAT_LON;LAT_LON;"
+			},
+		"GEO":{
+			"prefix": ".geo",
+			"body": "${1:LAT1};${2:LON1};${3:LAT2};${4:LON2};${5|COAST, APRON, BUILDING, DANGER, PIER, PROHIBIT, RESTRICT, RUNWAY, STOPBAR, TSTP, TAXI_CENTER, TAXI_BORDER, TAXIW, TAXIWAY|};$0",
+			"description": "LAT1;LON1;LAT2;LON2;TYPE;"
+			},		
+		"FCL":{
+			"prefix": ".fcl",
+			"body": "${1:STATIC_OR_ICAO_POS};${2:FILL_HEX_COLOR};${3|0,1|};${4:STROKE_HEX_COLOR};${5|0,1|};${6:STRING(Optional)};$0",
+			"description": "DYNAMIC OR STATIC;FILL COLOR;1=WITH OPACITY;STROKE COLOR;1=WITH OPACITY;STRING (OPTIONAL);"
+			},		
+		"FIX":{
+			"prefix": ".fix",
+			"body": "${1:FIX_NAME};${2:LAT};${3:LON};${4|0,1,2|};${5|0,1|};$0",
+			"description": "NUMBER (SERIAL);LAT;LON;[Type, 0 = Enroute, 1 = Terminal, 2 = Both];[Boundary, 0 = off, 1 = on];"
+			},		
+		"BOG RUNWAYS":{
+			"prefix": ".bogr",
+			"body": "14R:14L:32R:32L",
+			"description": "14R:14L:32R:32L"
+			},		
+		"LABEL":{
+			"prefix": ".lb",
+			"body": "${1:DESCRIPTION};$0",
+			"description": "Add Labels"
+			},		
+		"LAT_LON":{
+			"prefix": ".ll",
+			"body": "${FIX};$FIX;$0",
+			"description": "FIX;FIX;"
+			},	
+		"AIRAC_CHECK":{
+			"prefix": ".acc",
+			"body": "// AIRAC 2408 - AMDT 66/24 CHECKED BY 657678 (${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR})",
+			"description": "Check Stamp"
+			},	
+		}
+	
